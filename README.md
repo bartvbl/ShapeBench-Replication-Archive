@@ -6,6 +6,8 @@ van Blokland, Bart Iver. "ShapeBench: a new approach to benchmarking local 3D sh
 
 doi, TBA
 
+**The code in this repository is intended as an archive. For the version that is maintained, please go [here]{https://github.com/bartvbl/ShapeBench}.**
+
 ### Getting started
 
 Clone the repository using the --recursive flag:
