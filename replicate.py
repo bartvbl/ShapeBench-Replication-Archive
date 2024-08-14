@@ -32,7 +32,7 @@ def downloadFile(fileURL, tempFile, extractInDirectory, name, unzipCommand = 'p7
     os.makedirs('input/download', exist_ok=True)
     if not os.path.isfile('input/download/' + tempFile) or ask_for_confirmation('It appears the ' + name + ' archive file has already been downloaded. Would you like to download it again?'):
         print('Downloading the ' + name + ' archive file..')
-        run_command_line_command('wget --output-document ' + tempFile + ' ' + fileURL, 'input/download/')
+        run_command_line_command('wget --no-check-certificate --output-document ' + tempFile + ' ' + fileURL, 'input/download/')
     print()
     os.makedirs(extractInDirectory, exist_ok=True)
     run_command_line_command(unzipCommand.format(os.path.join(os.path.relpath('input/download', extractInDirectory), tempFile)), extractInDirectory)
