@@ -37,8 +37,8 @@ The ShapeBench evaluation methodology is proposed as an extension to the popular
 
 TBA
 
-### User Notes
-To ensure compatibility with the default LibEigen3 installation from `apt`, please modify line `27` of [CMakeLists](https://github.com/bartvbl/libShapeDescriptor/blob/d793a7ff45a88570857ee5e63a84259f5d75dbd0/CMakeLists.txt) to
+### Troubleshooting
+To ensure compatibility with the default LibEigen3 installation from `apt`, please modify line `27` of [CMakeLists](https://github.com/bartvbl/ShapeBench-Replication-Archive/blob/main/CMakeLists.txt) to
 ```
 find_package(Eigen3 3.3.0 REQUIRED)
 ```
