@@ -140,7 +140,7 @@ add_executable(shapebench ${PROJECT_SOURCES} ${PROJECT_HEADERS} ${LIBRARY_SOURCE
 target_link_libraries(shapebench PUBLIC ShapeDescriptor OpenMP::OpenMP_CXX Jolt glfw gitinfo ceres CURL::libcurl GMP_Interface fmt::fmt) # lsan ${PCL_LIBRARIES} ${SDL2_LIBRARIES}
 target_compile_options(shapebench PRIVATE $<$<COMPILE_LANGUAGE:CUDA>: -Xcompiler=-fopenmp>) #-Xcompiler=-fsanitize=leak
 target_compile_options(shapebench PRIVATE -frounding-math)
-set_property(TARGET shapebench PROPERTY CUDA_ARCHITECTURES 52 60 61 70 75 80 90)
+set_property(TARGET shapebench PROPERTY CUDA_ARCHITECTURES native)
 #target_compile_definitions(shapebench PRIVATE ${PCL_DEFINITIONS})
 
 # Needed because Jolt drops a bunch of architecture specific compiler flags that NVCC doesn't understand
@@ -150,4 +150,4 @@ target_compile_options(shapebench PRIVATE $<$<COMPILE_LANGUAGE:CUDA>: -forward-u
 
 add_executable(armadillo tools/similarityrenderer/main.cpp)
 target_link_libraries(armadillo PUBLIC ShapeDescriptor)
-set_property(TARGET armadillo PROPERTY CUDA_ARCHITECTURES 52 60 61 70 75 80 90)
+set_property(TARGET armadillo PROPERTY CUDA_ARCHITECTURES native)
