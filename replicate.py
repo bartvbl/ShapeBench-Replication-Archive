@@ -52,10 +52,10 @@ def downloadDatasetsMenu():
         os.makedirs('input/download/', exist_ok=True)
 
         if choice == 1 or choice == 2:
-            downloadFile('https://ntnu.box.com/shared/static/rily0qg6tpzb9prym8ois0korr3x4vxa.7z',
+            downloadFile('https://zenodo.org/records/17661494/files/precomputed_results.7z?download=1',
                          'precomputed_results.7z', 'precomputed_results/', 'Results computed by the author')
         if choice == 1 or choice == 3:
-            downloadFile('https://ntnu.box.com/shared/static/1oo864m02zj9itdptzbwvvj04epigyio.7z', 'cache.7z',
+            downloadFile('https://zenodo.org/records/17661494/files/cache.7z?download=1', 'cache.7z',
                          'cache', 'Precomputed cache files')
         if choice == 4:
             return
